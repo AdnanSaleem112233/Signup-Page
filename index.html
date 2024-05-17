@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+        }
+        .container {
+            width: 60%;
+            background-color: #007bff;
+            display: flex;
+            height: 80%;
+            border-radius: 8px;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+        }
+        .sideImg {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #007bff;
+        }
+        .sideImg img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        .login-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0 8px 8px 0;
+        }
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+        }
+        .login-form h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #242323;
+        }
+        .input-group input[type="text"],
+        .input-group input[type="email"],
+        .input-group input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            padding-left: 40px;
+            border: 1px solid #4e2f2f;
+            border-radius: 13px;
+            font-size: 14px;
+            background: #ffffff;
+        }
+        .input-group i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+          
+            color: #888;
+        }
+        .input-group input[type="submit"] {
+            width: 94%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 7%;
+        }
+        .input-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .social-login {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 5%;
+        }
+        .orWord {
+            margin-top: 5%;
+            text-align: center;
+        }
+        .loginHere {
+            text-align: center;
+            color: gray;
+            margin-top: 8%;
+        }
+        .social-login a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+        }
+        .social-login a.google {
+            background-color: #db4437;
+        }
+        .social-login a.facebook {
+            background-color: #3b5998;
+        }
+        .social-login a.apple {
+            background-color: #000000;
+        }
+        .social-login a.google:hover {
+            background-color: #c23321;
+        }
+        .social-login a.facebook:hover {
+            background-color: #2d4373;
+        }
+        .social-login a.apple:hover {
+            background-color: #333333;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+            .sideImg {
+                height: 200px;
+            }
+            .login-container {
+                border-radius: 0 0 8px 8px;
+                margin-left: 0;
+            }
+        }
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 15px;
+            }
+            .social-login a {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            .input-group input[type="text"],
+            .input-group input[type="email"],
+            .input-group input[type="password"] {
+                font-size: 12px;
+            }
+            .input-group input[type="submit"] {
+                font-size: 14px;
+            }
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sideImg">
+            <img src="https://images.unsplash.com/photo-1633409361618-c73427e4e206?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3Znc3xlbnwwfHwwfHx8MA%3D%3D" alt="Side Image">
+        </div>
+        <div class="login-container">
+            <div class="login-form">
+                <h2>Sign up</h2>
+                <form action="#">
+                    <div class="input-group">
+                        <label for="fullname">Full Name</label>
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="submit" value="Sign-Up">
+                    </div>
+                    <div class="orWord">- OR -</div>
+                </form>
+                <div class="social-login">
+                    <a href="#" class="google"><i class="fab fa-google"></i></a>
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="apple"><i class="fab fa-apple"></i></a>
+                </div>
+                <div class="loginHere">Already have an account? Login</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
